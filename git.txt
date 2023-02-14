@@ -1,0 +1,28 @@
+git commit -m "Title" -m "Description ..........";
+git reset HEAD~
+
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Tiago321123/JornadaDev.git
+git push -u origin main
+
+git commit --amend  mudar o commit, último
+
+Commit:
+
+Title explaining the changes 50 letters
+
+    Description with more details, explain what and why vs. how
+    75 letters
+
+    If applied, will 
+
+    Using the rails server command, run your web application on the built-in webserver in your Rails app, Puma:
+
+
+rails s:
+
+rails server --binding=127.0.0.1
+--binding binds your application to a specified IP. By default, this flag will bind Rails to 0.0.0.0, but since this means that Rails will listen to all interfaces, it is more secure to use 127.0.0.1 to specify the localhost. By default, the application listens on port 3000.
