@@ -21,11 +21,11 @@ default: &default
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: tiago
-  password: <%= ENV['JornadaDev_DATABASE_240321'] %>
+  password: <%= ENV['Autenticacao_DATABASE_240321'] %>
   
 development:
   <<: *default
-  database: JornadaDev_development
+  database: Autenticao_development
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
@@ -58,7 +58,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: JornadaDev_test
+  database: Autenticacao_test
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -82,6 +82,6 @@ test:
 #
 production:
   <<: *default
-  database: JornadaDev_production
-  username: JornadaDev
-  password: <%= ENV["JORNADADEV_DATABASE_240321"] %>
+  database: Autenticacao_production
+  username: Autenticacao
+  password: <%= ENV["Autenticacao_DATABASE_240321"] %>
