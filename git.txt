@@ -26,3 +26,38 @@ rails s:
 
 rails server --binding=127.0.0.1
 --binding binds your application to a specified IP. By default, this flag will bind Rails to 0.0.0.0, but since this means that Rails will listen to all interfaces, it is more secure to use 127.0.0.1 to specify the localhost. By default, the application listens on port 3000.
+
+
+The attributes are SQL types, hence the following are supported:
+
+:binary
+:boolean
+:date
+:datetime
+:decimal
+:float
+:integer
+:primary_key
+:string
+:text
+:time
+:timestamp
+
+ create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+
+    # rails generate migration add_index_to_users_email
+    # A partir de agora, todas as ocorrências de email serão salvas como index e o sistema procurará diretamente nos registros de e-mail.
+
+    t.integer "age"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "password_digest" 
+    # rails generate migration add_password_digest_to_users password_digest:string
+  end
+
+
+
+rails c --sandbox
+Any modifications you make will be rolled back on exit
